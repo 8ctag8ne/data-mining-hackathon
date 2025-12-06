@@ -1,0 +1,8 @@
+user_id,install_date,install_time,event_counter,event_type,event_date,event_time,event_properties,is_churned
+1,2025-04-15,2025-04-15 12:22:54+00:00,1,quiz_question_onboarding_screen_view,2025-04-15,2025-04-15 12:22:54+00:00,"{""screen_name"":""goals""}",1
+1,2025-04-15,2025-04-15 12:22:54+00:00,2,quiz_question_continue_tap,2025-04-15,2025-04-15 12:23:21+00:00,"{""screen_name"":""goals"",""answers"":""  social-media""}",1
+1,2025-04-15,2025-04-15 12:22:54+00:00,3,quiz_question_onboarding_screen_view,2025-04-15,2025-04-15 12:23:49+00:00,"{""screen_name"":""assistance""}",1
+1,2025-04-15,2025-04-15 12:22:54+00:00,4,quiz_question_continue_tap,2025-04-15,2025-04-15 12:24:22+00:00,"{""screen_name"":""assistance"",""answers"":""step-by-step""}",1
+1,2025-04-15,2025-04-15 12:22:54+00:00,5,quiz_question_onboarding_screen_view,2025-04-15,2025-04-15 12:24:49+00:00,"{""screen_name"":""interests""}",1
+1,2025-04-15,2025-04-15 12:22:54+00:00,6,quiz_question_continue_tap,2025-04-15,2025-04-15 12:25:13+00:00,"{""screen_name"":""interests"",""answers"":""history, diy, music, cooking""}",1
+1,2025-04-15,2025-04-15 12:22:54+00:00,7,one_onboarding_screen_view,2025-04-15,2025-04-15 12:25:15+00:00,NA,1
