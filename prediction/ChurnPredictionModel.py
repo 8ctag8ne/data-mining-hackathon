@@ -74,6 +74,29 @@ class ChurnPredictionModel:
         else:
             print("⚠️  Колонка 'successful_purchase' не знайдена, пропускаємо фільтрацію")
 
+        if 'likes' in self.df_processed.columns and 'dislikes' in self.df_processed.columns:
+            print("✓ Створення колонок like_rate та dislike_rate...")
+
+            likes = self.df_processed['likes']
+            dislikes = self.df_processed['dislikes']
+            total = likes + dislikes
+
+            # Уникаємо ділення на 0
+            self.df_processed['like_rate'] = likes / total.replace(0, np.nan)
+            self.df_processed['dislike_rate'] = dislikes / total.replace(0, np.nan)
+
+            # Заповнення NaN у випадках total = 0
+            self.df_processed['like_rate'].fillna(0, inplace=True)
+            self.df_processed['dislike_rate'].fillna(0, inplace=True)
+
+            # Видалення старих колонок
+            self.df_processed.drop(columns=['likes', 'dislikes'], inplace=True)
+
+            print("  ✓ Колонки 'likes' та 'dislikes' видалено")
+            print("  ✓ Нові колонки 'like_rate' та 'dislike_rate' додано")
+        else:
+            print("⚠️  Колонки 'likes'/'dislikes' не знайдено — пропускаємо створення rate-фіч")
+
         # Видалення дублікатів
         duplicates = self.df_processed.duplicated().sum()
         self.df_processed = self.df_processed.drop_duplicates()
@@ -551,7 +574,7 @@ def main():
     # Налаштування
     filepath = 'user_features.csv'  # Або 'cleaned.csv' для обробленого
     use_cleaned = False  # True якщо використовуєте cleaned.csv
-    use_categories = False  # False для multi-hot encoding кожного значення
+    use_categories = True  # False для multi-hot encoding кожного значення
 
     print(f"⚙️  Налаштування:")
     print(f"   Файл: {filepath}")
