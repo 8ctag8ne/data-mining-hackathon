@@ -70,6 +70,7 @@ class ChurnPredictionModel:
 
             # Видалення колонки successful_purchase (більше не потрібна)
             self.df_processed.drop(columns=['successful_purchase'], inplace=True)
+            self.df_processed.drop(columns=['answer_errors'], inplace=True)
             print(f"✓ Видалено колонку 'successful_purchase' (всі значення = 1)")
         else:
             print("⚠️  Колонка 'successful_purchase' не знайдена, пропускаємо фільтрацію")
