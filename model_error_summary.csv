@@ -1,0 +1,4 @@
+Model Type,Messages Sent,Error Events,Error Rate (%),Share of All Errors (%)
+basic,101338,40675,40.14,85.43
+advanced,47032,6935,14.75,14.57
+TOTAL,148370,47610,32.09,100.0

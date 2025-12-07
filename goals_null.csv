@@ -1,0 +1,255 @@
+answer,count
+  content-creation,169
+  essay-writing,161
+  education,137
+  social-media,114
+  entertainment,107
+  mental-health,102
+coding-assistance content-creation,67
+  cooking,66
+coding-assistance essay-writing,62
+business-purposes content-creation,62
+business-purposes essay-writing,52
+business-purposes education,49
+coding-assistance education,47
+coding-assistance social-media,45
+coding-assistance entertainment,45
+business-purposes entertainment,31
+coding-assistance cooking,29
+business-purposes social-media,29
+business-purposes mental-health,28
+coding-assistance mental-health,24
+business-purposes cooking,18
+coding-assistance essay-writing business-purposes content-creation,12
+coding-assistance content-creation business-purposes essay-writing,11
+business-purposes content-creation coding-assistance education,10
+coding-assistance content-creation   essay-writing,10
+coding-assistance content-creation business-purposes education,9
+business-purposes essay-writing coding-assistance entertainment,9
+coding-assistance education business-purposes social-media,9
+business-purposes entertainment coding-assistance social-media,9
+coding-assistance mental-health business-purposes content-creation,9
+coding-assistance education business-purposes essay-writing,8
+coding-assistance cooking business-purposes education,8
+business-purposes essay-writing coding-assistance social-media,8
+business-purposes content-creation coding-assistance essay-writing,8
+coding-assistance essay-writing   social-media,8
+coding-assistance essay-writing business-purposes entertainment,8
+business-purposes education coding-assistance essay-writing,8
+business-purposes essay-writing coding-assistance content-creation,8
+  education coding-assistance content-creation,7
+  social-media coding-assistance education,7
+coding-assistance essay-writing   content-creation,7
+business-purposes entertainment coding-assistance content-creation,7
+business-purposes essay-writing   education,7
+coding-assistance entertainment business-purposes education,7
+  essay-writing coding-assistance content-creation,7
+coding-assistance content-creation   entertainment,7
+coding-assistance entertainment business-purposes content-creation,7
+coding-assistance content-creation business-purposes mental-health,6
+business-purposes content-creation coding-assistance mental-health,6
+  education coding-assistance essay-writing,6
+coding-assistance entertainment   content-creation,6
+coding-assistance content-creation business-purposes social-media,6
+business-purposes education coding-assistance entertainment,6
+  content-creation business-purposes entertainment,6
+  content-creation coding-assistance cooking,6
+  education business-purposes essay-writing,6
+coding-assistance social-media   content-creation,6
+business-purposes content-creation coding-assistance social-media,6
+  education coding-assistance social-media,6
+coding-assistance education   essay-writing,6
+coding-assistance entertainment business-purposes essay-writing,6
+coding-assistance education   content-creation,6
+coding-assistance entertainment business-purposes cooking,6
+coding-assistance mental-health business-purposes social-media,5
+coding-assistance content-creation   social-media,5
+  essay-writing business-purposes cooking,5
+  content-creation business-purposes social-media,5
+coding-assistance social-media   education,5
+business-purposes mental-health coding-assistance cooking,5
+business-purposes cooking coding-assistance content-creation,5
+coding-assistance mental-health   education,5
+coding-assistance social-media   essay-writing,5
+coding-assistance education business-purposes content-creation,5
+  entertainment business-purposes education,5
+business-purposes entertainment coding-assistance essay-writing,5
+coding-assistance essay-writing   education,5
+coding-assistance essay-writing business-purposes cooking,5
+  education business-purposes content-creation,5
+coding-assistance content-creation business-purposes entertainment,5
+business-purposes essay-writing coding-assistance mental-health,5
+business-purposes education   entertainment,5
+coding-assistance mental-health business-purposes essay-writing,5
+business-purposes entertainment   content-creation,5
+coding-assistance education   mental-health,5
+  content-creation business-purposes essay-writing,5
+  education coding-assistance entertainment,5
+  content-creation business-purposes education,5
+  entertainment coding-assistance content-creation,4
+coding-assistance essay-writing business-purposes education,4
+business-purposes education   content-creation,4
+  essay-writing coding-assistance entertainment,4
+coding-assistance essay-writing business-purposes mental-health,4
+coding-assistance mental-health business-purposes entertainment,4
+  essay-writing coding-assistance education,4
+  content-creation coding-assistance entertainment,4
+business-purposes mental-health coding-assistance education,4
+business-purposes social-media coding-assistance essay-writing,4
+  content-creation coding-assistance essay-writing,4
+  entertainment coding-assistance education,4
+business-purposes education coding-assistance mental-health,4
+business-purposes social-media coding-assistance education,4
+coding-assistance content-creation   education,4
+coding-assistance education   entertainment,4
+  mental-health coding-assistance education,4
+business-purposes content-creation   social-media,4
+business-purposes social-media   essay-writing,4
+coding-assistance social-media business-purposes essay-writing,4
+business-purposes education   social-media,4
+business-purposes essay-writing   entertainment,4
+business-purposes social-media   content-creation,4
+business-purposes mental-health coding-assistance content-creation,4
+business-purposes entertainment coding-assistance education,4
+coding-assistance cooking business-purposes social-media,4
+  entertainment business-purposes content-creation,4
+coding-assistance social-media business-purposes entertainment,4
+coding-assistance social-media   entertainment,4
+business-purposes mental-health   content-creation,4
+business-purposes education coding-assistance content-creation,4
+  mental-health coding-assistance content-creation,4
+  education business-purposes entertainment,4
+coding-assistance essay-writing   entertainment,4
+business-purposes essay-writing coding-assistance education,4
+coding-assistance cooking business-purposes essay-writing,4
+  essay-writing coding-assistance cooking,4
+business-purposes education coding-assistance social-media,4
+coding-assistance social-media business-purposes education,4
+  cooking coding-assistance essay-writing,4
+  cooking business-purposes social-media,4
+business-purposes education coding-assistance cooking,4
+  content-creation coding-assistance education,3
+business-purposes mental-health coding-assistance essay-writing,3
+  education business-purposes social-media,3
+business-purposes social-media   mental-health,3
+coding-assistance education   cooking,3
+  essay-writing business-purposes content-creation,3
+coding-assistance education business-purposes mental-health,3
+coding-assistance essay-writing business-purposes social-media,3
+  mental-health business-purposes social-media,3
+business-purposes social-media coding-assistance content-creation,3
+coding-assistance cooking business-purposes content-creation,3
+  mental-health business-purposes essay-writing,3
+coding-assistance cooking   mental-health,3
+coding-assistance social-media   mental-health,3
+business-purposes content-creation   essay-writing,3
+coding-assistance cooking business-purposes entertainment,3
+coding-assistance entertainment   social-media,3
+  cooking business-purposes entertainment,3
+business-purposes essay-writing   social-media,3
+business-purposes content-creation   education,3
+coding-assistance entertainment   essay-writing,3
+business-purposes content-creation coding-assistance cooking,3
+  entertainment business-purposes mental-health,3
+business-purposes social-media   entertainment,3
+business-purposes essay-writing coding-assistance cooking,3
+coding-assistance mental-health   content-creation,3
+business-purposes content-creation   cooking,3
+business-purposes social-media coding-assistance mental-health,3
+coding-assistance mental-health business-purposes education,3
+business-purposes mental-health   entertainment,3
+  social-media coding-assistance essay-writing,3
+business-purposes mental-health   education,3
+  essay-writing business-purposes entertainment,3
+  entertainment coding-assistance social-media,3
+  cooking business-purposes essay-writing,3
+  content-creation business-purposes cooking,3
+  mental-health business-purposes entertainment,3
+business-purposes mental-health coding-assistance entertainment,3
+  essay-writing business-purposes education,3
+coding-assistance social-media   cooking,2
+  social-media coding-assistance content-creation,2
+business-purposes mental-health   cooking,2
+  mental-health coding-assistance entertainment,2
+coding-assistance education   social-media,2
+coding-assistance cooking   education,2
+business-purposes social-media coding-assistance cooking,2
+business-purposes cooking coding-assistance social-media,2
+coding-assistance essay-writing   mental-health,2
+coding-assistance education business-purposes entertainment,2
+  education business-purposes cooking,2
+  entertainment business-purposes cooking,2
+coding-assistance education business-purposes cooking,2
+coding-assistance mental-health business-purposes cooking,2
+  entertainment coding-assistance cooking,2
+business-purposes entertainment   mental-health,2
+business-purposes essay-writing   cooking,2
+coding-assistance content-creation business-purposes cooking,2
+business-purposes education   essay-writing,2
+business-purposes social-media   cooking,2
+business-purposes content-creation coding-assistance entertainment,2
+coding-assistance cooking   entertainment,2
+coding-assistance entertainment   mental-health,2
+coding-assistance entertainment   cooking,2
+  education business-purposes mental-health,2
+  cooking coding-assistance education,2
+  cooking business-purposes education,2
+coding-assistance mental-health   entertainment,2
+  cooking coding-assistance social-media,2
+  content-creation business-purposes mental-health,2
+  entertainment coding-assistance mental-health,2
+business-purposes essay-writing   mental-health,2
+  content-creation coding-assistance social-media,2
+  entertainment business-purposes social-media,2
+business-purposes education   mental-health,2
+  education coding-assistance cooking,2
+business-purposes cooking   entertainment,2
+business-purposes entertainment coding-assistance cooking,2
+coding-assistance social-media business-purposes cooking,2
+coding-assistance mental-health   essay-writing,2
+  social-media business-purposes essay-writing,2
+coding-assistance essay-writing   cooking,2
+  social-media coding-assistance cooking,1
+coding-assistance mental-health   social-media,1
+  mental-health coding-assistance cooking,1
+  social-media business-purposes education,1
+  social-media coding-assistance entertainment,1
+  content-creation coding-assistance mental-health,1
+coding-assistance cooking   social-media,1
+  mental-health business-purposes content-creation,1
+business-purposes social-media coding-assistance entertainment,1
+business-purposes cooking coding-assistance essay-writing,1
+  essay-writing business-purposes mental-health,1
+  social-media business-purposes cooking,1
+  education coding-assistance mental-health,1
+  mental-health business-purposes education,1
+  essay-writing coding-assistance mental-health,1
+  cooking coding-assistance mental-health,1
+  social-media coding-assistance mental-health,1
+business-purposes mental-health   social-media,1
+business-purposes entertainment   cooking,1
+business-purposes mental-health coding-assistance social-media,1
+  cooking business-purposes mental-health,1
+coding-assistance cooking   content-creation,1
+coding-assistance social-media business-purposes content-creation,1
+  essay-writing coding-assistance social-media,1
+business-purposes education   cooking,1
+business-purposes essay-writing   content-creation,1
+coding-assistance entertainment   education,1
+coding-assistance content-creation   mental-health,1
+business-purposes cooking coding-assistance education,1
+business-purposes entertainment   social-media,1
+  entertainment coding-assistance essay-writing,1
+  social-media business-purposes mental-health,1
+coding-assistance entertainment business-purposes social-media,1
+business-purposes mental-health   essay-writing,1
+coding-assistance mental-health   cooking,1
+coding-assistance cooking business-purposes mental-health,1
+  mental-health coding-assistance essay-writing,1
+coding-assistance social-media business-purposes mental-health,1
+business-purposes content-creation   mental-health,1
+business-purposes cooking coding-assistance entertainment,1
+  mental-health business-purposes cooking,1
+  social-media business-purposes entertainment,1
+coding-assistance cooking   essay-writing,1
+business-purposes cooking   content-creation,1

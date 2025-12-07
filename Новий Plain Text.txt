@@ -1,0 +1,82 @@
+from googleapiclient.discovery import build
+
+# 🔑 Твій API ключ з Google Cloud Console
+API_KEY = "AIzaSyDOEOiDtfTITXQjMqiSDXj0rALBSeotBBU"
+
+# 🔷 Ідентифікатор каналу (наприклад: UC_x5XG1OV2P6uZZ5FSM9Ttw — це Google Developers)
+CHANNEL_ID = "UC_x5XG1OV2P6uZZ5FSM9Ttw"
+
+# Створюємо клієнт YouTube API
+youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+# ------------------- 1️⃣ Отримати список відео з каналу -------------------
+def get_videos_from_channel(channel_id):
+    videos = []
+    next_page_token = None
+
+    while True:
+        request = youtube.search().list(
+            part='snippet',
+            channelId=channel_id,
+            maxResults=50,
+            order='date',  # найновіші спочатку
+            pageToken=next_page_token
+        )
+        response = request.execute()
+
+        for item in response['items']:
+            if item['id']['kind'] == 'youtube#video':
+                videos.append({
+                    'title': item['snippet']['title'],
+                    'videoId': item['id']['videoId']
+                })
+
+        next_page_token = response.get('nextPageToken')
+        if not next_page_token:
+            break
+
+    return videos
+
+# ------------------- 2️⃣ Отримати коментарі до відео -------------------
+def get_comments(video_id):
+    comments = []
+    next_page_token = None
+
+    while True:
+        request = youtube.commentThreads().list(
+            part='snippet',
+            videoId=video_id,
+            maxResults=50,
+            textFormat='plainText',
+            pageToken=next_page_token
+        )
+        response = request.execute()
+
+        for item in response['items']:
+            top_comment = item['snippet']['topLevelComment']['snippet']
+            comments.append({
+                'author': top_comment['authorDisplayName'],
+                'text': top_comment['textDisplay'],
+                'likeCount': top_comment['likeCount']
+            })
+
+        next_page_token = response.get('nextPageToken')
+        if not next_page_token:
+            break
+
+    return comments
+
+# ------------------- 3️⃣ Основна логіка -------------------
+videos = get_videos_from_channel(CHANNEL_ID)
+
+if videos:
+    latest_video = videos[0]
+    print(f"\n🆕 Останнє відео: {latest_video['title']} (ID: {latest_video['videoId']})")
+
+    comments = get_comments(latest_video['videoId'])
+    print(f"\n💬 Коментарі до '{latest_video['title']}':")
+    for i, comment in enumerate(comments[:10], start=1):
+        print(f"{i}. {comment['author']}: {comment['text']} (👍 {comment['likeCount']})")
+
+else:
+    print("❌ Не знайдено відео на цьому каналі.")

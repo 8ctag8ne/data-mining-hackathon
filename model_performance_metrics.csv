@@ -1,0 +1,13 @@
+Metric,Value
+Silhouette Score,0.5032428003288567
+Davies-Bouldin Index,0.879150559418075
+Calinski-Harabasz Score,7578.027195766024
+Inertia,49368.19723732537
+Churn Accuracy,0.8405754550792719
+Churn Precision,0.8384977553925326
+Churn Recall,0.9802867383512545
+Churn F1-Score,0.9038654470345234
+Baseline Accuracy (most frequent),0.7645331767469172
+Baseline Accuracy (random),0.503131728322568
+Improvement vs Baseline 1 (%),9.946236559139784
+Improvement vs Baseline 2 (%),67.06866368410816
