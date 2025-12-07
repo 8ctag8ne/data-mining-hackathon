@@ -530,6 +530,183 @@ class ChurnPredictionModel:
         plt.show()
         print()
 
+    def plot_results_separate(self, y_pred, y_pred_proba, cm):
+        """Крок 7: Візуалізація результатів - окремі файли"""
+        print("=" * 70)
+        print("КРОК 7: Візуалізація результатів")
+        print("=" * 70)
+
+        # 1. Confusion Matrix
+        print("Генерація: Confusion Matrix...")
+        fig, ax = plt.subplots(figsize=(8, 6))
+        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False, ax=ax)
+        ax.set_title('Confusion Matrix', fontweight='bold', fontsize=14)
+        ax.set_ylabel('True Label', fontsize=12)
+        ax.set_xlabel('Predicted Label', fontsize=12)
+        ax.set_xticklabels(['Active', 'Churned'])
+        ax.set_yticklabels(['Active', 'Churned'])
+        plt.tight_layout()
+        plt.savefig('confusion_matrix.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: confusion_matrix.png")
+
+        # 2. ROC Curve
+        print("Генерація: ROC Curve...")
+        fig, ax = plt.subplots(figsize=(8, 6))
+        fpr, tpr, _ = roc_curve(self.y_test, y_pred_proba)
+        roc_auc = roc_auc_score(self.y_test, y_pred_proba)
+        ax.plot(fpr, tpr, 'b-', linewidth=2, label=f'ROC AUC = {roc_auc:.4f}')
+        ax.plot([0, 1], [0, 1], 'r--', linewidth=1, label='Random Classifier')
+        ax.set_xlabel('False Positive Rate', fontsize=12)
+        ax.set_ylabel('True Positive Rate', fontsize=12)
+        ax.set_title('ROC Curve', fontweight='bold', fontsize=14)
+        ax.legend(loc='lower right', fontsize=11)
+        ax.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig('roc_curve.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: roc_curve.png")
+
+        # 3. Precision-Recall Curve
+        print("Генерація: Precision-Recall Curve...")
+        fig, ax = plt.subplots(figsize=(8, 6))
+        precision, recall, _ = precision_recall_curve(self.y_test, y_pred_proba)
+        ax.plot(recall, precision, 'g-', linewidth=2)
+        ax.set_xlabel('Recall', fontsize=12)
+        ax.set_ylabel('Precision', fontsize=12)
+        ax.set_title('Precision-Recall Curve', fontweight='bold', fontsize=14)
+        ax.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig('precision_recall_curve.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: precision_recall_curve.png")
+
+        # 4. Feature Correlation with Churn (топ-15)
+        print("Генерація: Feature Correlation...")
+        fig, ax = plt.subplots(figsize=(12, 8))
+
+        # Обчислення кореляції між ознаками та is_churned
+        feature_correlations = []
+        for feature in self.X_train.columns:
+            all_X = pd.concat([self.X_train, self.X_test])
+            all_y = pd.concat([self.y_train, self.y_test])
+            correlation = all_X[feature].corr(all_y)
+            feature_correlations.append({
+                'feature': feature,
+                'correlation': correlation,
+                'coefficient': self.model.coef_[0][list(self.X_train.columns).index(feature)]
+            })
+
+        # Сортування за абсолютною кореляцією
+        corr_df = pd.DataFrame(feature_correlations).sort_values('correlation', key=abs, ascending=False).head(15)
+        corr_df = corr_df.iloc[::-1]  # Інвертуємо для відображення
+
+        # Кольори
+        colors = ['#d32f2f' if x > 0 else '#388e3c' for x in corr_df['correlation']]
+
+        # Створення барів
+        bars = ax.barh(range(len(corr_df)), corr_df['correlation'], color=colors, alpha=0.75, 
+                    edgecolor='black', linewidth=0.8)
+
+        # Налаштування осей
+        ax.set_yticks(range(len(corr_df)))
+        ax.set_yticklabels(corr_df['feature'], fontsize=11)
+        ax.set_xlabel('Correlation with Churn (negative ←  |  →  positive)', fontsize=12)
+        ax.set_title('Top 15 Features: Correlation with Churn Risk', fontweight='bold', fontsize=14)
+
+        # Вертикальна лінія на нулі
+        ax.axvline(x=0, color='#424242', linestyle='-', linewidth=1.5, zorder=0)
+
+        # Горизонтальні лінії сітки
+        for i in range(len(corr_df) + 1):
+            ax.axhline(y=i - 0.5, color='gray', linestyle='-', linewidth=0.5, alpha=0.3, zorder=0)
+
+        # Додавання значень кореляції на барах
+        for i, (idx, row) in enumerate(corr_df.iterrows()):
+            value = row['correlation']
+            x_pos = value + (0.01 if value > 0 else -0.01)
+            ha = 'left' if value > 0 else 'right'
+            ax.text(x_pos, i, f'{value:.3f}', va='center', ha=ha, fontsize=9, fontweight='bold')
+
+        # Легенда
+        from matplotlib.patches import Patch
+        legend_elements = [
+            Patch(facecolor='#d32f2f', alpha=0.75, edgecolor='black', label='Increases Churn Risk'),
+            Patch(facecolor='#388e3c', alpha=0.75, edgecolor='black', label='Decreases Churn Risk')
+        ]
+        ax.legend(handles=legend_elements, loc='lower right', fontsize=11)
+
+        # Встановлення межі осі X симетрично
+        max_abs_corr = corr_df['correlation'].abs().max()
+        ax.set_xlim(-max_abs_corr * 1.15, max_abs_corr * 1.15)
+
+        plt.tight_layout()
+        plt.savefig('feature_correlation.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: feature_correlation.png")
+
+        # 5. Predicted Probability Distribution
+        print("Генерація: Probability Distribution...")
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.hist(y_pred_proba[self.y_test == 0], bins=30, alpha=0.6,
+                label='Active (0)', color='blue', edgecolor='black')
+        ax.hist(y_pred_proba[self.y_test == 1], bins=30, alpha=0.6,
+                label='Churned (1)', color='red', edgecolor='black')
+        ax.set_xlabel('Predicted Probability', fontsize=12)
+        ax.set_ylabel('Frequency', fontsize=12)
+        ax.set_title('Predicted Probability Distribution', fontweight='bold', fontsize=14)
+        ax.legend(fontsize=11)
+        ax.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig('probability_distribution.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: probability_distribution.png")
+
+        # 6. Class Distribution
+        print("Генерація: Class Distribution...")
+        fig, ax = plt.subplots(figsize=(8, 6))
+        class_counts = [sum(self.y_test == 0), sum(self.y_test == 1)]
+        ax.bar(['Active (0)', 'Churned (1)'], class_counts,
+            color=['blue', 'red'], alpha=0.7, edgecolor='black')
+        ax.set_ylabel('Count', fontsize=12)
+        ax.set_title('Test Set Class Distribution', fontweight='bold', fontsize=14)
+        ax.grid(True, alpha=0.3, axis='y')
+        for i, v in enumerate(class_counts):
+            ax.text(i, v + 5, str(v), ha='center', fontweight='bold', fontsize=11)
+        plt.tight_layout()
+        plt.savefig('class_distribution.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: class_distribution.png")
+
+        # 7. Prediction Distribution
+        print("Генерація: Prediction Distribution...")
+        fig, ax = plt.subplots(figsize=(8, 6))
+        pred_counts = [sum(y_pred == 0), sum(y_pred == 1)]
+        ax.bar(['Active (0)', 'Churned (1)'], pred_counts,
+            color=['blue', 'red'], alpha=0.7, edgecolor='black')
+        ax.set_ylabel('Count', fontsize=12)
+        ax.set_title('Predicted Class Distribution', fontweight='bold', fontsize=14)
+        ax.grid(True, alpha=0.3, axis='y')
+        for i, v in enumerate(pred_counts):
+            ax.text(i, v + 5, str(v), ha='center', fontweight='bold', fontsize=11)
+        plt.tight_layout()
+        plt.savefig('prediction_distribution.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("✓ Збережено: prediction_distribution.png")
+
+        print("\n" + "=" * 70)
+        print("✓ Усі візуалізації збережено")
+        print("=" * 70)
+        print("\nЗгенеровані файли:")
+        print("  1. confusion_matrix.png")
+        print("  2. roc_curve.png")
+        print("  3. precision_recall_curve.png")
+        print("  4. feature_correlation.png")
+        print("  5. probability_distribution.png")
+        print("  6. class_distribution.png")
+        print("  7. prediction_distribution.png")
+        print()
+
     def plot_feature_correlation_matrix(self, save_path="feature_correlation_matrix.png", figsize=(16, 14)):
         """
         Будує heatmap кореляційної матриці фіч (всі числові фічі після препроцесингу)
@@ -632,6 +809,7 @@ def main():
     y_pred, y_pred_proba, accuracy, f1, roc_auc, cm = model.evaluate_model()
     model.plot_results(y_pred, y_pred_proba, cm)
     model.plot_feature_correlation_matrix()
+    model.plot_results_separate(y_pred, y_pred_proba, cm)
 
     # Збереження моделі
     model.save_model('churn_model.pkl')
