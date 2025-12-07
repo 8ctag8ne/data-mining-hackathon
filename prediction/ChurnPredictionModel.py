@@ -528,6 +528,43 @@ class ChurnPredictionModel:
         plt.show()
         print()
 
+    def plot_feature_correlation_matrix(self, save_path="feature_correlation_matrix.png", figsize=(16, 14)):
+        """
+        Будує heatmap кореляційної матриці фіч (всі числові фічі після препроцесингу)
+        і зберігає у окремий файл.
+        """
+
+        if self.X_train is None or self.X_test is None:
+            raise ValueError("Дані не підготовлені. Спочатку викликай split_and_scale().")
+
+        # Об’єднуємо train + test для повнішої матриці
+        all_X = pd.concat([self.X_train, self.X_test])
+
+        # Обчислюємо кореляцію
+        corr = all_X.corr()
+
+        # Малюємо
+        plt.figure(figsize=figsize)
+        sns.heatmap(
+            corr,
+            cmap="coolwarm",
+            annot=False,
+            cbar=True,
+            square=True,
+            linewidths=0.5,
+            linecolor="gray"
+        )
+        plt.title("Feature Correlation Matrix", fontsize=16, fontweight="bold")
+        plt.xticks(rotation=90)
+        plt.yticks(rotation=0)
+        plt.tight_layout()
+
+        # Зберігаємо
+        plt.savefig(save_path, dpi=300)
+        plt.close()
+
+        print(f"✓ Кореляційна матриця фіч збережена у файл «{save_path}»")
+
     def save_model(self, model_path='churn_model.pkl'):
         """Збереження моделі"""
         import pickle
@@ -592,6 +629,7 @@ def main():
     cv_scores = model.cross_validate(cv=5)
     y_pred, y_pred_proba, accuracy, f1, roc_auc, cm = model.evaluate_model()
     model.plot_results(y_pred, y_pred_proba, cm)
+    model.plot_feature_correlation_matrix()
 
     # Збереження моделі
     model.save_model('churn_model.pkl')
