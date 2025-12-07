@@ -70,7 +70,8 @@ class ChurnPredictionModel:
 
             # Видалення колонки successful_purchase (більше не потрібна)
             self.df_processed.drop(columns=['successful_purchase'], inplace=True)
-            self.df_processed.drop(columns=['answer_errors'], inplace=True)
+            self.df_processed.drop(columns=['answer_errors', 'messages_received'], inplace=True)
+
             print(f"✓ Видалено колонку 'successful_purchase' (всі значення = 1)")
         else:
             print("⚠️  Колонка 'successful_purchase' не знайдена, пропускаємо фільтрацію")
@@ -461,7 +462,7 @@ class ChurnPredictionModel:
         # Налаштування осей
         ax4.set_yticks(range(len(corr_df)))
         ax4.set_yticklabels(corr_df['feature'], fontsize=10)
-        ax4.set_xlabel('Correlation with Churn (негативний вплив ←  |  → позитивний вплив)', fontsize=11)
+        ax4.set_xlabel('Correlation with Churn (negative ←  |  →  positive)', fontsize=11)
         ax4.set_title('Top 15 Features: Correlation with Churn Risk', fontweight='bold', fontsize=13)
 
         # Вертикальна лінія на нулі (вирівняна по центру барів)
@@ -481,8 +482,8 @@ class ChurnPredictionModel:
         # Легенда
         from matplotlib.patches import Patch
         legend_elements = [
-            Patch(facecolor='#d32f2f', alpha=0.75, edgecolor='black', label='Підвищує ризик Churn ⚠️'),
-            Patch(facecolor='#388e3c', alpha=0.75, edgecolor='black', label='Знижує ризик Churn ✓')
+            Patch(facecolor='#d32f2f', alpha=0.75, edgecolor='black', label='Increases Churn Risk'),
+            Patch(facecolor='#388e3c', alpha=0.75, edgecolor='black', label='Decreases Churn Risk')
         ]
         ax4.legend(handles=legend_elements, loc='lower right', fontsize=10)
 
