@@ -1,0 +1,10 @@
+Metric,Basic Only (avg),Advanced Users (avg),Difference
+total_events,48.834,80.739,31.905
+messages_sent,11.771,21.611,9.84
+messages_received,6.11,16.964,10.853
+answer_errors,4.884,4.079,-0.805
+error_rate,0.28,0.219,-0.061
+likes,1.276,5.592,4.316
+dislikes,2.018,1.911,-0.107
+successful_purchase,0.653,1.0,0.347
+is_churned,0.872,0.489,-0.383

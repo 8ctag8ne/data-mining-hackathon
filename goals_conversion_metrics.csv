@@ -1,0 +1,274 @@
+answer,total_users,purchased,conversion_rate,churned,churn_rate
+business-purposes cooking   social-media,4,4,100.0,2,50.0
+business-purposes entertainment   education,8,8,100.0,8,100.0
+business-purposes cooking   education,10,10,100.0,7,70.0
+business-purposes social-media   education,12,12,100.0,9,75.0
+  cooking business-purposes content-creation,12,12,100.0,9,75.0
+  cooking coding-assistance content-creation,15,15,100.0,12,80.0
+business-purposes entertainment   essay-writing,16,16,100.0,8,50.0
+business-purposes entertainment coding-assistance mental-health,14,14,100.0,10,71.42857142857143
+coding-assistance entertainment business-purposes mental-health,13,13,100.0,10,76.92307692307693
+  cooking coding-assistance entertainment,6,6,100.0,6,100.0
+  essay-writing business-purposes social-media,18,18,100.0,12,66.66666666666666
+  social-media business-purposes content-creation,19,19,100.0,13,68.42105263157895
+  entertainment business-purposes essay-writing,7,7,100.0,4,57.14285714285714
+  mental-health coding-assistance social-media,6,6,100.0,5,83.33333333333334
+business-purposes cooking   mental-health,4,4,100.0,3,75.0
+business-purposes cooking coding-assistance mental-health,5,5,100.0,4,80.0
+business-purposes content-creation   entertainment,21,21,100.0,12,57.14285714285714
+business-purposes cooking   essay-writing,6,6,100.0,3,50.0
+coding-assistance content-creation   cooking,16,16,100.0,11,68.75
+coding-assistance social-media business-purposes content-creation,36,35,97.22222222222221,27,77.14285714285715
+business-purposes essay-writing   content-creation,30,29,96.66666666666667,20,68.96551724137932
+  entertainment coding-assistance essay-writing,23,22,95.65217391304348,15,68.18181818181817
+coding-assistance entertainment   education,23,22,95.65217391304348,16,72.72727272727273
+  essay-writing business-purposes mental-health,20,19,95.0,14,73.68421052631578
+  essay-writing coding-assistance social-media,20,19,95.0,13,68.42105263157895
+coding-assistance content-creation   mental-health,18,17,94.44444444444444,11,64.70588235294117
+coding-assistance cooking   content-creation,18,17,94.44444444444444,12,70.58823529411765
+coding-assistance entertainment business-purposes social-media,17,16,94.11764705882352,9,56.25
+business-purposes cooking coding-assistance essay-writing,17,16,94.11764705882352,11,68.75
+coding-assistance cooking   essay-writing,16,15,93.75,10,66.66666666666666
+business-purposes mental-health coding-assistance social-media,16,15,93.75,7,46.666666666666664
+business-purposes content-creation coding-assistance entertainment,32,30,93.75,23,76.66666666666667
+coding-assistance social-media business-purposes mental-health,15,14,93.33333333333333,13,92.85714285714286
+business-purposes social-media coding-assistance entertainment,15,14,93.33333333333333,9,64.28571428571429
+  education coding-assistance mental-health,15,14,93.33333333333333,9,64.28571428571429
+  content-creation business-purposes mental-health,29,27,93.10344827586206,21,77.77777777777779
+business-purposes content-creation   mental-health,14,13,92.85714285714286,10,76.92307692307693
+business-purposes education coding-assistance content-creation,55,51,92.72727272727272,29,56.86274509803921
+coding-assistance cooking   social-media,13,12,92.3076923076923,7,58.333333333333336
+  content-creation coding-assistance mental-health,13,12,92.3076923076923,8,66.66666666666666
+  mental-health coding-assistance essay-writing,13,12,92.3076923076923,5,41.66666666666667
+  essay-writing coding-assistance mental-health,13,12,92.3076923076923,6,50.0
+  mental-health business-purposes content-creation,13,12,92.3076923076923,9,75.0
+coding-assistance essay-writing business-purposes education,51,47,92.15686274509804,34,72.3404255319149
+coding-assistance education business-purposes entertainment,25,23,92.0,17,73.91304347826086
+  content-creation coding-assistance education,37,34,91.8918918918919,19,55.88235294117647
+business-purposes education   cooking,12,11,91.66666666666666,6,54.54545454545454
+business-purposes entertainment   cooking,12,11,91.66666666666666,6,54.54545454545454
+  mental-health business-purposes education,12,11,91.66666666666666,7,63.63636363636363
+business-purposes social-media coding-assistance content-creation,34,31,91.17647058823529,21,67.74193548387096
+  social-media coding-assistance entertainment,11,10,90.9090909090909,8,80.0
+business-purposes essay-writing coding-assistance education,43,39,90.69767441860465,31,79.48717948717949
+  social-media coding-assistance content-creation,21,19,90.47619047619048,10,52.63157894736842
+  content-creation coding-assistance social-media,21,19,90.47619047619048,15,78.94736842105263
+  social-media coding-assistance mental-health,10,9,90.0,4,44.44444444444444
+  social-media business-purposes education,10,9,90.0,5,55.55555555555556
+coding-assistance mental-health   cooking,10,9,90.0,7,77.77777777777779
+business-purposes cooking coding-assistance education,10,9,90.0,6,66.66666666666666
+  social-media business-purposes entertainment,10,9,90.0,6,66.66666666666666
+  social-media coding-assistance cooking,10,9,90.0,5,55.55555555555556
+business-purposes mental-health   essay-writing,10,9,90.0,6,66.66666666666666
+business-purposes cooking   content-creation,10,9,90.0,8,88.88888888888889
+coding-assistance mental-health business-purposes education,29,26,89.65517241379311,19,73.07692307692307
+coding-assistance content-creation business-purposes cooking,19,17,89.47368421052632,15,88.23529411764706
+  education coding-assistance cooking,19,17,89.47368421052632,11,64.70588235294117
+coding-assistance education business-purposes content-creation,47,42,89.36170212765957,32,76.19047619047619
+coding-assistance cooking business-purposes content-creation,28,25,89.28571428571429,18,72.0
+business-purposes content-creation   education,27,24,88.88888888888889,18,75.0
+business-purposes content-creation   essay-writing,27,24,88.88888888888889,18,75.0
+coding-assistance education   social-media,18,16,88.88888888888889,11,68.75
+business-purposes education   essay-writing,18,16,88.88888888888889,11,68.75
+  social-media business-purposes essay-writing,18,16,88.88888888888889,8,50.0
+business-purposes essay-writing   mental-health,18,16,88.88888888888889,9,56.25
+business-purposes cooking coding-assistance entertainment,9,8,88.88888888888889,7,87.5
+coding-assistance content-creation   education,36,32,88.88888888888889,24,75.0
+  essay-writing business-purposes content-creation,26,23,88.46153846153845,14,60.86956521739131
+  content-creation coding-assistance essay-writing,34,30,88.23529411764706,21,70.0
+  entertainment coding-assistance content-creation,33,29,87.87878787878788,21,72.41379310344827
+coding-assistance cooking business-purposes mental-health,8,7,87.5,5,71.42857142857143
+  cooking business-purposes mental-health,8,7,87.5,3,42.857142857142854
+coding-assistance mental-health   social-media,8,7,87.5,5,71.42857142857143
+  cooking coding-assistance mental-health,8,7,87.5,4,57.14285714285714
+coding-assistance mental-health   essay-writing,16,14,87.5,12,85.71428571428571
+coding-assistance education business-purposes cooking,16,14,87.5,9,64.28571428571429
+coding-assistance education business-purposes mental-health,24,21,87.5,13,61.904761904761905
+coding-assistance essay-writing business-purposes social-media,24,21,87.5,14,66.66666666666666
+business-purposes entertainment coding-assistance education,32,28,87.5,22,78.57142857142857
+business-purposes mental-health coding-assistance content-creation,31,27,87.09677419354838,21,77.77777777777779
+business-purposes content-creation coding-assistance cooking,23,20,86.95652173913044,11,55.00000000000001
+business-purposes cooking,137,119,86.86131386861314,92,77.31092436974791
+business-purposes education   mental-health,15,13,86.66666666666667,8,61.53846153846154
+coding-assistance entertainment   mental-health,15,13,86.66666666666667,9,69.23076923076923
+business-purposes essay-writing   cooking,15,13,86.66666666666667,7,53.84615384615385
+coding-assistance social-media business-purposes education,29,25,86.20689655172413,21,84.0
+business-purposes education coding-assistance social-media,29,25,86.20689655172413,17,68.0
+business-purposes entertainment coding-assistance cooking,14,12,85.71428571428571,9,75.0
+  mental-health coding-assistance cooking,7,6,85.71428571428571,5,83.33333333333334
+coding-assistance essay-writing   cooking,14,12,85.71428571428571,6,50.0
+  mental-health business-purposes cooking,7,6,85.71428571428571,3,50.0
+business-purposes entertainment   social-media,7,6,85.71428571428571,5,83.33333333333334
+coding-assistance education,329,282,85.71428571428571,194,68.79432624113475
+coding-assistance cooking   education,14,12,85.71428571428571,7,58.333333333333336
+business-purposes social-media coding-assistance essay-writing,27,23,85.18518518518519,16,69.56521739130434
+coding-assistance social-media business-purposes entertainment,27,23,85.18518518518519,17,73.91304347826086
+  entertainment coding-assistance education,27,23,85.18518518518519,15,65.21739130434783
+coding-assistance mental-health   content-creation,20,17,85.0,11,64.70588235294117
+  essay-writing business-purposes entertainment,20,17,85.0,12,70.58823529411765
+  content-creation business-purposes essay-writing,33,28,84.84848484848484,21,75.0
+business-purposes social-media,189,160,84.65608465608466,114,71.25
+business-purposes entertainment,202,171,84.65346534653465,114,66.66666666666666
+  education business-purposes cooking,13,11,84.61538461538461,6,54.54545454545454
+coding-assistance social-media business-purposes cooking,13,11,84.61538461538461,9,81.81818181818183
+coding-assistance mental-health   entertainment,13,11,84.61538461538461,9,81.81818181818183
+coding-assistance essay-writing business-purposes mental-health,26,22,84.61538461538461,16,72.72727272727273
+  essay-writing coding-assistance cooking,26,22,84.61538461538461,20,90.9090909090909
+coding-assistance cooking   entertainment,13,11,84.61538461538461,8,72.72727272727273
+coding-assistance essay-writing   entertainment,26,22,84.61538461538461,18,81.81818181818183
+coding-assistance content-creation business-purposes education,58,49,84.48275862068965,31,63.26530612244898
+coding-assistance education   content-creation,38,32,84.21052631578947,22,68.75
+  entertainment coding-assistance social-media,19,16,84.21052631578947,12,75.0
+coding-assistance content-creation,423,356,84.16075650118204,240,67.41573033707866
+coding-assistance mental-health,151,127,84.10596026490066,83,65.35433070866141
+  content-creation coding-assistance entertainment,25,21,84.0,9,42.857142857142854
+business-purposes content-creation coding-assistance essay-writing,50,42,84.0,29,69.04761904761905
+coding-assistance essay-writing business-purposes cooking,31,26,83.87096774193549,19,73.07692307692307
+business-purposes mental-health coding-assistance essay-writing,18,15,83.33333333333334,12,80.0
+business-purposes mental-health   social-media,6,5,83.33333333333334,3,60.0
+coding-assistance entertainment   essay-writing,18,15,83.33333333333334,8,53.333333333333336
+  social-media coding-assistance essay-writing,18,15,83.33333333333334,12,80.0
+coding-assistance cooking business-purposes entertainment,18,15,83.33333333333334,9,60.0
+business-purposes mental-health coding-assistance entertainment,18,15,83.33333333333334,13,86.66666666666667
+coding-assistance education   cooking,18,15,83.33333333333334,12,80.0
+coding-assistance education   entertainment,24,20,83.33333333333334,14,70.0
+business-purposes content-creation coding-assistance social-media,36,30,83.33333333333334,25,83.33333333333334
+business-purposes entertainment   mental-health,12,10,83.33333333333334,7,70.0
+coding-assistance mental-health business-purposes cooking,12,10,83.33333333333334,6,60.0
+  entertainment business-purposes social-media,12,10,83.33333333333334,9,90.0
+business-purposes essay-writing coding-assistance content-creation,47,39,82.97872340425532,25,64.1025641025641
+  content-creation business-purposes education,29,24,82.75862068965517,16,66.66666666666666
+business-purposes entertainment coding-assistance essay-writing,29,24,82.75862068965517,17,70.83333333333334
+coding-assistance social-media business-purposes essay-writing,23,19,82.6086956521739,11,57.89473684210527
+coding-assistance content-creation business-purposes essay-writing,63,52,82.53968253968253,36,69.23076923076923
+  mental-health business-purposes essay-writing,17,14,82.35294117647058,8,57.14285714285714
+  essay-writing business-purposes education,17,14,82.35294117647058,11,78.57142857142857
+business-purposes social-media coding-assistance mental-health,17,14,82.35294117647058,9,64.28571428571429
+coding-assistance content-creation business-purposes entertainment,28,23,82.14285714285714,12,52.17391304347826
+coding-assistance essay-writing,346,284,82.08092485549133,195,68.66197183098592
+coding-assistance essay-writing   content-creation,39,32,82.05128205128204,18,56.25
+business-purposes mental-health coding-assistance education,22,18,81.81818181818183,12,66.66666666666666
+coding-assistance entertainment   cooking,11,9,81.81818181818183,9,100.0
+  essay-writing coding-assistance education,22,18,81.81818181818183,13,72.22222222222221
+  mental-health coding-assistance entertainment,11,9,81.81818181818183,7,77.77777777777779
+  entertainment business-purposes content-creation,22,18,81.81818181818183,14,77.77777777777779
+coding-assistance entertainment business-purposes education,38,31,81.57894736842105,23,74.19354838709677
+coding-assistance mental-health business-purposes essay-writing,27,22,81.48148148148148,18,81.81818181818183
+business-purposes essay-writing coding-assistance mental-health,27,22,81.48148148148148,16,72.72727272727273
+business-purposes education,262,213,81.29770992366412,156,73.23943661971832
+business-purposes content-creation   cooking,16,13,81.25,6,46.15384615384615
+coding-assistance entertainment,240,195,81.25,131,67.17948717948717
+  education coding-assistance content-creation,37,30,81.08108108108108,21,70.0
+business-purposes content-creation,326,264,80.98159509202453,169,64.01515151515152
+business-purposes content-creation   social-media,21,17,80.95238095238095,13,76.47058823529412
+  mental-health coding-assistance content-creation,21,17,80.95238095238095,10,58.82352941176471
+business-purposes essay-writing,272,220,80.88235294117648,154,70.0
+coding-assistance content-creation business-purposes social-media,31,25,80.64516129032258,17,68.0
+coding-assistance cooking,148,119,80.4054054054054,84,70.58823529411765
+business-purposes mental-health,142,114,80.28169014084507,77,67.54385964912281
+coding-assistance essay-writing   education,25,20,80.0,11,55.00000000000001
+coding-assistance entertainment   social-media,15,12,80.0,10,83.33333333333334
+business-purposes education coding-assistance cooking,20,16,80.0,10,62.5
+business-purposes social-media coding-assistance cooking,10,8,80.0,6,75.0
+coding-assistance essay-writing   mental-health,10,8,80.0,5,62.5
+business-purposes social-media   content-creation,20,16,80.0,10,62.5
+  entertainment business-purposes cooking,10,8,80.0,7,87.5
+coding-assistance education   essay-writing,29,23,79.3103448275862,17,73.91304347826086
+  education business-purposes content-creation,24,19,79.16666666666666,12,63.1578947368421
+coding-assistance social-media,216,171,79.16666666666666,109,63.74269005847953
+coding-assistance content-creation   social-media,24,19,79.16666666666666,11,57.89473684210527
+business-purposes mental-health   content-creation,19,15,78.94736842105263,15,100.0
+  education business-purposes entertainment,19,15,78.94736842105263,11,73.33333333333333
+coding-assistance entertainment   content-creation,28,22,78.57142857142857,12,54.54545454545454
+business-purposes cooking coding-assistance content-creation,23,18,78.26086956521739,13,72.22222222222221
+  entertainment business-purposes education,23,18,78.26086956521739,12,66.66666666666666
+coding-assistance social-media   education,23,18,78.26086956521739,13,72.22222222222221
+coding-assistance essay-writing business-purposes content-creation,55,43,78.18181818181819,33,76.74418604651163
+  cooking business-purposes education,9,7,77.77777777777779,6,85.71428571428571
+  education business-purposes mental-health,9,7,77.77777777777779,6,85.71428571428571
+  essay-writing coding-assistance entertainment,18,14,77.77777777777779,12,85.71428571428571
+business-purposes education   content-creation,18,14,77.77777777777779,9,64.28571428571429
+business-purposes social-media coding-assistance education,18,14,77.77777777777779,10,71.42857142857143
+business-purposes education coding-assistance entertainment,27,21,77.77777777777779,20,95.23809523809523
+business-purposes content-creation coding-assistance education,45,35,77.77777777777779,23,65.71428571428571
+business-purposes essay-writing   entertainment,18,14,77.77777777777779,10,71.42857142857143
+  education coding-assistance essay-writing,27,21,77.77777777777779,14,66.66666666666666
+coding-assistance essay-writing business-purposes entertainment,36,28,77.77777777777779,20,71.42857142857143
+business-purposes essay-writing coding-assistance social-media,35,27,77.14285714285715,23,85.18518518518519
+coding-assistance content-creation business-purposes mental-health,26,20,76.92307692307693,11,55.00000000000001
+business-purposes essay-writing   social-media,13,10,76.92307692307693,7,70.0
+coding-assistance social-media   mental-health,13,10,76.92307692307693,7,70.0
+  essay-writing coding-assistance content-creation,30,23,76.66666666666667,16,69.56521739130434
+business-purposes entertainment coding-assistance content-creation,30,23,76.66666666666667,13,56.52173913043478
+coding-assistance mental-health business-purposes entertainment,17,13,76.47058823529412,9,69.23076923076923
+coding-assistance social-media   essay-writing,21,16,76.19047619047619,10,62.5
+coding-assistance content-creation   entertainment,29,22,75.86206896551724,15,68.18181818181817
+coding-assistance entertainment business-purposes content-creation,29,22,75.86206896551724,15,68.18181818181817
+business-purposes essay-writing   education,29,22,75.86206896551724,18,81.81818181818183
+coding-assistance education business-purposes social-media,37,28,75.67567567567568,17,60.71428571428571
+coding-assistance content-creation   essay-writing,41,31,75.60975609756098,20,64.51612903225806
+  social-media business-purposes mental-health,4,3,75.0,3,100.0
+business-purposes entertainment   content-creation,20,15,75.0,10,66.66666666666666
+  content-creation business-purposes social-media,20,15,75.0,10,66.66666666666666
+business-purposes education coding-assistance mental-health,16,12,75.0,6,50.0
+coding-assistance cooking business-purposes essay-writing,16,12,75.0,11,91.66666666666666
+coding-assistance entertainment business-purposes essay-writing,24,18,75.0,13,72.22222222222221
+coding-assistance mental-health   education,20,15,75.0,9,60.0
+business-purposes cooking   entertainment,8,6,75.0,4,66.66666666666666
+business-purposes education coding-assistance essay-writing,32,24,75.0,12,50.0
+  education business-purposes social-media,12,9,75.0,8,88.88888888888889
+business-purposes social-media   entertainment,12,9,75.0,6,66.66666666666666
+  entertainment business-purposes mental-health,12,9,75.0,5,55.55555555555556
+  content-creation business-purposes cooking,12,9,75.0,7,77.77777777777779
+business-purposes mental-health   education,12,9,75.0,7,77.77777777777779
+  social-media business-purposes cooking,4,3,75.0,2,66.66666666666666
+  entertainment coding-assistance mental-health,8,6,75.0,5,83.33333333333334
+  cooking coding-assistance education,8,6,75.0,5,83.33333333333334
+  education coding-assistance social-media,23,17,73.91304347826086,12,70.58823529411765
+coding-assistance social-media   content-creation,23,17,73.91304347826086,12,70.58823529411765
+coding-assistance mental-health business-purposes content-creation,34,25,73.52941176470588,15,60.0
+  content-creation business-purposes entertainment,22,16,72.72727272727273,13,81.25
+business-purposes mental-health   entertainment,11,8,72.72727272727273,7,87.5
+business-purposes content-creation coding-assistance mental-health,22,16,72.72727272727273,13,81.25
+coding-assistance education business-purposes essay-writing,29,21,72.41379310344827,11,52.38095238095239
+business-purposes cooking coding-assistance social-media,7,5,71.42857142857143,2,40.0
+  cooking coding-assistance social-media,7,5,71.42857142857143,4,80.0
+coding-assistance entertainment business-purposes cooking,21,15,71.42857142857143,9,60.0
+business-purposes mental-health   cooking,7,5,71.42857142857143,4,80.0
+  education business-purposes essay-writing,21,15,71.42857142857143,10,66.66666666666666
+  mental-health coding-assistance education,14,10,71.42857142857143,7,70.0
+business-purposes education   social-media,14,10,71.42857142857143,8,80.0
+business-purposes education   entertainment,17,12,70.58823529411765,6,50.0
+  cooking business-purposes essay-writing,10,7,70.0,2,28.57142857142857
+  content-creation coding-assistance cooking,20,14,70.0,12,85.71428571428571
+  cooking business-purposes entertainment,10,7,70.0,5,71.42857142857143
+  mental-health business-purposes social-media,10,7,70.0,6,85.71428571428571
+business-purposes essay-writing coding-assistance entertainment,29,20,68.96551724137932,11,55.00000000000001
+  social-media coding-assistance education,22,15,68.18181818181817,12,80.0
+coding-assistance social-media   entertainment,12,8,66.66666666666666,4,50.0
+business-purposes essay-writing coding-assistance cooking,9,6,66.66666666666666,4,66.66666666666666
+business-purposes social-media   cooking,6,4,66.66666666666666,2,50.0
+coding-assistance social-media   cooking,6,4,66.66666666666666,2,50.0
+  entertainment coding-assistance cooking,6,4,66.66666666666666,3,75.0
+  cooking business-purposes social-media,12,8,66.66666666666666,6,75.0
+business-purposes social-media   essay-writing,12,8,66.66666666666666,5,62.5
+  cooking coding-assistance essay-writing,12,8,66.66666666666666,3,37.5
+coding-assistance essay-writing   social-media,23,15,65.21739130434783,10,66.66666666666666
+business-purposes mental-health coding-assistance cooking,14,9,64.28571428571429,7,77.77777777777779
+coding-assistance mental-health business-purposes social-media,14,9,64.28571428571429,6,66.66666666666666
+  education coding-assistance entertainment,14,9,64.28571428571429,8,88.88888888888889
+business-purposes social-media   mental-health,8,5,62.5,3,60.0
+coding-assistance cooking   mental-health,8,5,62.5,3,60.0
+  mental-health business-purposes entertainment,8,5,62.5,2,40.0
+coding-assistance cooking business-purposes education,21,13,61.904761904761905,9,69.23076923076923
+coding-assistance education   mental-health,13,8,61.53846153846154,3,37.5
+business-purposes entertainment coding-assistance social-media,22,13,59.09090909090909,7,53.84615384615385
+  essay-writing business-purposes cooking,12,7,58.333333333333336,6,85.71428571428571
+coding-assistance cooking business-purposes social-media,9,5,55.55555555555556,4,80.0
+  content-creation,298,129,43.288590604026844,95,73.64341085271317
+  education,235,98,41.702127659574465,68,69.38775510204081
+  entertainment,181,74,40.88397790055249,46,62.16216216216216
+  social-media,189,75,39.682539682539684,55,73.33333333333333
+  cooking,109,43,39.44954128440367,27,62.7906976744186
+  essay-writing,253,92,36.36363636363637,59,64.13043478260869
+  mental-health,152,50,32.89473684210527,30,60.0

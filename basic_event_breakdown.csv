@@ -1,0 +1,6 @@
+Event Type,Count,Percentage (%)
+send_message_tap,101338,44.86
+answer_received,54309,24.04
+answer_error,40675,18.01
+answer_dislike_tap,17936,7.94
+answer_like_tap,11618,5.14
