@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import RobustScaler
 from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
 from sklearn.cluster import KMeans
 import umap
@@ -28,7 +28,7 @@ class UserSegmentation:
         self.hdbscan_model = None
         self.kmeans_model = None
         self.optimal_k = None
-        self.scaler = MinMaxScaler()
+        self.scaler = RobustScaler()
         self.n_clusters_found = None
 
     def load_and_clean_data(self):
@@ -538,7 +538,7 @@ def main():
     segmentation.feature_selection()
     segmentation.normalize_data()
 
-    K_range, inertias, silhouette_scores, db_scores, ch_scores, n_hdbscan = segmentation.find_optimal_clusters(max_k=40)
+    K_range, inertias, silhouette_scores, db_scores, ch_scores, n_hdbscan = segmentation.find_optimal_clusters(max_k=20)
 
     # Запит методу та кількості кластерів від користувача
     print("=" * 60)

@@ -130,7 +130,11 @@ features = df.groupby("user_id").apply(lambda g: pd.Series({
     ),
 
     # --- G. Error/Friction ---
-    "error_rate": safe_count(g["event_type"], "answer_error") / max(len(g), 1),
+    "error_rate": (
+        safe_count(g["event_type"], "answer_error") / safe_count(g["event_type"], "send_message_tap")
+        if safe_count(g["event_type"], "send_message_tap") > 0
+        else 0
+    ),
 
     # --- Churn (already validated) ---
     "is_churned": g["is_churned"].iloc[0]
